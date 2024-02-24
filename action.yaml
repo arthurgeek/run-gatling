@@ -49,7 +49,9 @@ runs:
                       {data: 'Max', header: true},
                       {data: 'Avg.', header: true},
                       {data: 'Std. Dev.', header: true},
-                      {data: 'RPS', header: true},
+                      {data: '75th %ile', header: true},
+                      {data: '95th %ile', header: true},
+                      {data: '99th %ile', header: true},
                   ]
               ];
               
@@ -63,7 +65,9 @@ runs:
                       requestMetrics.maxResponseTime.total.toString(),
                       requestMetrics.meanResponseTime.total.toString(),
                       requestMetrics.standardDeviation.total.toString(),
-                      requestMetrics.meanNumberOfRequestsPerSecond.total.toString(),
+                      requestMetrics.percentiles2.total.toString(),
+                      requestMetrics.percentiles3.total.toString(),
+                      requestMetrics.percentiles4.total.toString(),
                   ]);
               }
 
