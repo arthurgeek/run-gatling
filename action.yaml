@@ -54,6 +54,19 @@ runs:
                       {data: '99th %ile', header: true},
                   ]
               ];
+
+              tableContent.push([
+                      results.stats.name,
+                      results.stats.numberOfRequests.ok.toString(),
+                      results.stats.numberOfRequests.ko.toString(),
+                      results.stats.minResponseTime.total.toString(),
+                      results.stats.maxResponseTime.total.toString(),
+                      results.stats.meanResponseTime.total.toString(),
+                      results.stats.standardDeviation.total.toString(),
+                      results.stats.percentiles2.total.toString(),
+                      results.stats.percentiles3.total.toString(),
+                      results.stats.percentiles4.total.toString(),
+                  ]);
               
               for(const result in results.contents) {
                   const requestMetrics = results.contents[result].stats;
